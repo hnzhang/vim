@@ -1,3 +1,4 @@
+" write and tested with vim 8.0
 " ========================================================
 " common settings for both linux and windows
 set nocompatible " don't not compatible with vi
