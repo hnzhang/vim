@@ -9,7 +9,8 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'bundle/Vundle.vim'
+Plugin 'bundle/Vundle.vim' "load Vundle first
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line

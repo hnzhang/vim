@@ -2,7 +2,7 @@
 " ========================================================
 " common settings for both linux and windows
 set nocompatible " don't not compatible with vi
-colorscheme darkblue
+colorscheme pablo
 syntax on
 filetype on
 filetype plugin indent on "load file type plugins
