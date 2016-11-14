@@ -9,6 +9,10 @@ filetype plugin indent on "load file type plugins
 set isk+=_,$,@,%,#,- "none of these should be world dividers
 
 set incsearch hlsearch
+set showmatch
+
+set showcmd
+set cursorline
 
 set textwidth=0 wrapmargin=0 "turn off physical line wrapping
 set wrap "turn on wrap lines visually.
@@ -34,7 +38,7 @@ function VIM_UI()
 	set ruler "show current positions along the bottom
 	set cmdheight=2
 	set number
-	set lz "dont redraw while running macros(much faster)(lazy redraw)
+	set lazyredraw "dont redraw while running macros(much faster)
 	set hid " you can change buffer without saving
 	set backspace=2 "make backspace work normal
 	set whichwrap+=<,>,h,l "backspace and cursor keys wrap to
@@ -50,15 +54,19 @@ endfunction
 " visualize invisible chars
 set encoding=utf-8
 if has('gui_running')
-	set listchars=eol:⏎,tab:▶\ ,trail:␠,nbsp:⎵
+	set listchars=eol:⏎,tab:▶\ ,trail:␠,nbsp:⎵,space:.
 	"for vim UI
 	call VIM_UI()
 else
-	set listchars=tab:>.,trail:.,extends:\#,nbsp:.
+	set listchars=tab:>.,trail:.,extends:\#,nbsp:.,space:.
 endif
 set list
 
 set number
+
+"for python
+"
+"for c++
 
 set diffexpr=MyDiff()
 function MyDiff()
