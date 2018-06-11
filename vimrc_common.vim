@@ -31,6 +31,16 @@ set tabstop=2 softtabstop=2 shiftwidth=2
 set noexpandtab
 set smarttab "use tabs at the start of each line, spaces elsewhere
 set autoindent
+"set font of VIM
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
 
 function VIM_UI()
 	set lsp=0
@@ -53,12 +63,12 @@ endfunction
 
 " visualize invisible chars
 set encoding=utf-8
-if has('gui_running')
-	set listchars=eol:⏎,tab:▶\ ,trail:␠,nbsp:⎵,space:.
-	"for vim UI
-	call VIM_UI()
-else
-	set listchars=tab:>.,trail:.,extends:\#,nbsp:.,space:.
+"if has('gui_running')
+"	set listchars=eol:⏎,tab:▶\ ,trail:␠,nbsp:⎵,space:.
+"	"for vim UI
+"	call VIM_UI()
+"else
+"	set listchars=tab:>.,trail:.,extends:\#,nbsp:.,space:.
 endif
 set list
 
