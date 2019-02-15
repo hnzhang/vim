@@ -36,7 +36,7 @@
 (evil-mode 1)
 
 ;;visualize whitespace and tab. Please download blank-mode.el to blank-mode folder
-(add-to-list 'load-path "~/.emacs.d/blank-mode")
-(require 'blank-mode)
-(blank-mode 1)
 
+(setq blank-chars
+	'(tabs spaces trailing lines space-before-tab indentation empty space-after-tab))
+(add-to-list 'default-frame-alist '(font . "monospace 10"))
