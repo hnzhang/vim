@@ -40,3 +40,5 @@
 (setq blank-chars
 	'(tabs spaces trailing lines space-before-tab indentation empty space-after-tab))
 (add-to-list 'default-frame-alist '(font . "monospace 10"))
+
+(setq tab-width 4) ; or any other preferred value
