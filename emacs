@@ -36,9 +36,10 @@
 (evil-mode 1)
 
 ;;visualize whitespace and tab. Please download blank-mode.el to blank-mode folder
-
+;; this just uses native whitespae mode
 (setq blank-chars
 	'(tabs spaces trailing lines space-before-tab indentation empty space-after-tab))
+;; set font to monospace, this helps linux setup
 (add-to-list 'default-frame-alist '(font . "monospace 10"))
-
+(linum-mode 1) ;; turn on line number in this buffer
 (setq tab-width 4) ; or any other preferred value
