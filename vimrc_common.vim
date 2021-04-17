@@ -70,7 +70,6 @@ set encoding=utf-8
 "else
 "	set listchars=tab:>.,trail:.,extends:\#,nbsp:.,space:.
 endif
-set list
 
 set number
 
