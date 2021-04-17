@@ -42,34 +42,8 @@ if has("gui_running")
   endif
 endif
 
-function VIM_UI()
-	set lsp=0
-	set wildmenu "turn on wild menu
-	set ruler "show current positions along the bottom
-	set cmdheight=2
-	set number
-	set lazyredraw "dont redraw while running macros(much faster)
-	set hid " you can change buffer without saving
-	set backspace=2 "make backspace work normal
-	set whichwrap+=<,>,h,l "backspace and cursor keys wrap to
-	set mouse=a "use mouse everywhere
-	set shortmess=atI "shortens message to avoid 'prss a key' prompt
-	set report=0 " tell us when anything is changed via:...
-	set noerrorbells "dont make noise
-	"make the splitters btw windows be blink
-	set fillchars=vert:\ ,stl:\ ,stlnc:\ 
-endfunction
 
 
-" visualize invisible chars
-set encoding=utf-8
-"if has('gui_running')
-"	set listchars=eol:⏎,tab:▶\ ,trail:␠,nbsp:⎵,space:.
-"	"for vim UI
-"	call VIM_UI()
-"else
-"	set listchars=tab:>.,trail:.,extends:\#,nbsp:.,space:.
-endif
 
 set number
 
