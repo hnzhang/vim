@@ -31,48 +31,8 @@ set tabstop=2 softtabstop=2 shiftwidth=2
 set noexpandtab
 set smarttab "use tabs at the start of each line, spaces elsewhere
 set autoindent
-"set font of VIM
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
-  elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
-  elseif has("gui_win32")
-    set guifont=Consolas:h11:cANSI
-  endif
-endif
-
-
-
+set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set list
+set guifont=Monospace\ Regular\ 14 "tested with Linux Ubuntu,
 
 set number
-
-"for python
-"
-"for c++
-
-set diffexpr=MyDiff()
-function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  let eq = ''
-  if $VIMRUNTIME =~ ' '
-	if &sh =~ '\<cmd'
-	  let cmd = '""' . $VIMRUNTIME . '\diff"'
-	  let eq = '"'
-	else
-	  let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-	endif
-  else
-	let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
-
