@@ -33,6 +33,7 @@ set smarttab "use tabs at the start of each line, spaces elsewhere
 set autoindent
 set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set list
-set guifont=Monospace\ Regular\ 14 "tested with Linux Ubuntu,
+"set guifont=Monospace\ Regular\ 14 "tested with Linux Ubuntu
+"set guifont=Menlo-Regular:h14 'tested with MacBook with MacVIM
 
 set number
